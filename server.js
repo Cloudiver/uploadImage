@@ -14,6 +14,8 @@ let start = function(route, handle) {
         let pathName = url.parse(request.url).pathname;
 
         route(handle, pathName, response, request);
+		
+		// 异步执行, 将请求放在处理程序handle中
 
         // // 1) 收到请求: 先发送HTTP状态和HTTP头内容
         // response.writeHead(200, {"Content-Type": "text/plain"});
